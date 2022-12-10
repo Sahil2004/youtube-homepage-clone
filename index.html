@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="index.js"></script>
 </head>
 <body>
     <header>
@@ -14,8 +14,8 @@
         <img src="./assets/images/logo.svg" alt="Youtube Home">
         <span>IN</span>
     </header>
-    <nav class="expanded-nav">
-        <div class="menu_item">
+    <nav class="expanded-nav" onmouseenter="showScrollbar(this)" onmouseleave="hideScrollbar(this)">
+        <div class="menu_item active">
             <img src="./assets/images/home.svg" alt="Home" />
             <span>Home</span>
         </div>
@@ -142,6 +142,7 @@
             <a href="https://www.youtube.com/about/">About</a>
             <a href="https://www.youtube.com/about/press/">Press</a>
             <a href="https://www.youtube.com/about/copyright/">Copyright</a>
+            <br>
             <a href="https://www.youtube.com/t/contact_us">Contact us</a>
             <a href="https://www.youtube.com/creators">Creators</a>
             <a href="https://www.youtube.com/ads">Advertise</a>
@@ -150,7 +151,9 @@
             <a href="https://www.youtube.com/t/terms">Terms</a>
             <a href="https://www.youtube.com/t/privacy">Privacy</a>
             <a href="https://www.youtube.com/about/policies/">Policy & Safety</a>
+            <br>
             <a href="https://www.youtube.com/howyoutubeworks?utm_campaign=ytgen&amp;utm_source=ythp&amp;utm_medium=LeftNav&amp;utm_content=txt&amp;u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen">How YouTube works</a>
+            <br>
             <a href="https://www.youtube.com/new">Test new features</a>
         </div>
         <div class="copyright">
