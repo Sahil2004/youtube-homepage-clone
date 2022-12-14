@@ -7,13 +7,13 @@
     <title>Youtube</title>
     <link rel="shortcut icon" href="./assets/images/premium.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="left">
-                <img src="./assets/images/hamburger-menu.svg" alt="menu" class="menuIcon">
+                <img src="./assets/images/hamburger-menu.svg" alt="menu" class="menuIcon" onclick="toggleNav()">
                 <img src="./assets/images/logo.svg" alt="Youtube Home">
                 <span>IN</span>
             </div>
@@ -31,9 +31,15 @@
             </div>
         </div>
     </header>
-    <section class="right">
+    <section class="right" id="right">
         <div class="secondary-header">
-            <div class="container">
+            <div class="right-arrow" id="rightArrow">
+                <img src="./assets/images/right.svg" alt="Right" onclick="moveRight()">
+            </div>
+            <div class="left-arrow" id="leftArrow">
+                <img src="./assets/images/left.svg" alt="Left" onclick="moveLeft()">
+            </div>
+            <div class="container" id="horizontalScrolling">
                 <button class="active">
                     All
                 </button>
@@ -84,7 +90,7 @@
                 </button>
             </div>
         </div>
-        <div class="main-workspace">
+        <div class="main-workspace" id="mainWorkspace">
             <div class="card">
                 <div class="thumbnail">
                     <img src="./assets/thumbnail.webp">
@@ -535,7 +541,29 @@
             </div>
         </div>
     </section>
-    <nav class="expanded-nav" onmouseenter="showScrollbar(this)" onmouseleave="hideScrollbar(this)">
+    <nav class="short-nav" id="shortNav">
+        <div class="menu_item">
+            <img src="./assets/images/home.svg" alt="Home" />
+            <span>Home</span>
+        </div>
+        <div class="menu_item">
+            <img src="./assets/images/shorts.svg" alt="Shorts" />
+            <span>Shorts</span>
+        </div>
+        <div class="menu_item">
+            <img src="./assets/images/subscriptions.svg" alt="Subscriptions" />
+            <span>Subscriptions</span>
+        </div>
+        <div class="menu_item">
+            <img src="./assets/images/library.svg" alt="Library" />
+            <span>Library</span>
+        </div>
+        <div class="menu_item">
+            <img src="./assets/images/downloads.svg" alt="Downloads" />
+            <span>Downloads</span>
+        </div>
+    </nav>
+    <nav class="expanded-nav" id="expandedNav" onmouseenter="showScrollbar(this)" onmouseleave="hideScrollbar(this)">
         <div class="menu_item active">
             <img src="./assets/images/home.svg" alt="Home" />
             <span>Home</span>

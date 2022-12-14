@@ -18,7 +18,19 @@ header > .container > .left {
   padding: 0 0 0 30px;
 }
 header > .container > .left > .menuIcon {
-  margin-right: 20px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 50%;
+}
+header > .container > .left > .menuIcon:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+header > .container > .left > img {
+  cursor: pointer;
+}
+header > .container > .left > img:nth-child(2) {
+  position: relative;
+  top: -12px;
 }
 header > .container > .left > span {
   font-size: 13px;
@@ -87,14 +99,56 @@ section.right {
 }
 
 .secondary-header {
+  position: relative;
   display: fixed;
-  overflow-x: hidden;
+  overflow: hidden;
   margin-top: 5px;
   margin-bottom: 10px;
 }
+.secondary-header > .right-arrow {
+  position: absolute;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  right: 0;
+  background: linear-gradient(270deg, #FFFFFF 0%, #FFFFFF 67.1%, rgba(255, 255, 255, 0) 103.9%);
+  height: 100%;
+  width: 100px;
+}
+.secondary-header > .right-arrow > img {
+  margin-right: 20px;
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.secondary-header > .right-arrow > img:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+.secondary-header > .left-arrow {
+  position: absolute;
+  display: none;
+  justify-content: left;
+  align-items: center;
+  left: 0;
+  background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 67.1%, rgba(255, 255, 255, 0) 103.9%);
+  height: 100%;
+  width: 100px;
+}
+.secondary-header > .left-arrow > img {
+  margin-left: 20px;
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.secondary-header > .left-arrow > img:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
 .secondary-header > .container {
   display: flex;
+  overflow: hidden;
   gap: 10px;
+  padding-right: 80px;
+  scroll-behavior: smooth;
 }
 .secondary-header > .container > button {
   border: 0;
@@ -103,6 +157,7 @@ section.right {
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 14px;
   white-space: nowrap;
+  float: left;
   cursor: pointer;
 }
 .secondary-header > .container > button:hover {
@@ -137,13 +192,14 @@ section.right {
   background: rgb(65, 65, 65);
 }
 .main-workspace > .card {
+  width: 350px;
   cursor: pointer;
 }
 .main-workspace > .card > .thumbnail {
   position: relative;
 }
 .main-workspace > .card > .thumbnail > img {
-  height: 200px;
+  width: 100%;
 }
 .main-workspace > .card > .thumbnail > .time {
   position: absolute;
@@ -189,8 +245,32 @@ section.right {
   font-size: 24px;
 }
 
+.short-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 93vh;
+  width: 70px;
+}
+.short-nav > .menu_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  height: 70px;
+  font-size: 11px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+.short-nav > .menu_item:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
 .expanded-nav {
-  display: fixed;
+  display: block;
   height: 93vh;
   width: 270px;
   overflow-y: hidden;
